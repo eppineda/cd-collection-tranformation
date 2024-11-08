@@ -39,7 +39,7 @@ and we can observe (I'm using Chrome.)
 The built-in browser console says there are issues with the stylesheet, itself. (And the 
 interviewee stops and goes to work.)
 
-To be thorough, I had to convince myself the the xml document was also well-formed. I am 
+To be thorough, I had to convince myself the xml document was also well-formed. I am 
 not fond of eyeballing XML markup for syntax (and, also I am lazy) so I relied on any 
 existing tools that could provide that service for me: [Codebeautify.org](https://codebeautify.org/xml-parser-online)
 has an XML parser that will also validate a document. Niiiiice.
