@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="form.xsl"?>
+<catalog>
+  <cd>
+	<title>The Sign (Remastered)</title>
+	<artist>Ace of Base</artist>
+	<country>USA</country>
+	<year>2014</year>
+  </cd>
+  <cd>
+	<title>The Lonely One</title>
+	<artist>Alice Dejay</artist>
+	<country>UK</country>
+	<year>2000</year>
+  </cd>
+  <cd>
+	<title>Bach: Goldberg Variations</title>
+	<artist>Andreas Schiff</artist>
+	<country>USA</country>
+	<year>1986</year>
+  </cd>
+  <cd>
+	<title>Megistune</title>
+	<artist>Babymetal</artist>
+	<country>Japan</country>
+	<year>2014</year>
+  </cd>
+  <cd>
+	<title>Two Silver Trees</title>
+	<artist>Calexio</artist>
+	<country>EU</country>
+	<year>2008</year>
+  </cd>
+  <cd>
+	<title>Velcro</title>
+	<artist>Clarity</artist>
+	<country>USA</country>
+	<year>2015</year>
+  </cd>
+  <cd>
+	<title>That Certain Feeling</title>
+	<artist>George Gershwin</artist>
+	<country>USA</country>
+	<year>1933</year>
+  </cd>
+  <cd>
+	<title>Three Days</title>
+	<artist>K.D. Lang</artist>
+	<country>USA</country>
+	<year>1989</year>
+  </cd>
+  <cd>
+	<title>Destroy Everything You Touch</title>
+	<artist>Ladytron</artist>
+	<country>Japan</country>
+	<year>2011</year>
+  </cd>
+</catalog>
