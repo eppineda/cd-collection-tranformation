@@ -114,6 +114,39 @@ and doing similar for line 17 (for the closing tag). Refresh the browser aaaaand
 
 Oila!<sup>4</sup>
 
+### More
+
+The solution obviously has to be executed using the web browser's built-in capability. I like this 
+feature because it is very accessible and makes for fast prototyping. And, I think, for 
+modest implementations this is likely all that is required. However, some additional thoughts
+come to mind and make me pause:
+
+* Will the browser cache the transformation result, or does it really re-execute the stylesheet
+upon every request?
+* If a transformation were to be applied to a sufficiently large and/or complex document, might there 
+be an observable *delay* while the browser renders the result? If such an observation were made, I
+would consider an equivalent server-side solution.
+
+Some additional thoughts on the XSL file itself:
+
+* Externalize the CSS, which would be particularly helpful for a sufficiently complex set of rules, to
+help de-clutter the HTML document.
+* In a more extreme, hypothetical problem where the XML data itself were not a static file, I would 
+consider a server-side solution that further separates concerns: dynamic generation of XML (e.g. as a 
+result of a database query or, perhaps, as a result of an external EDI process), separate from XSLT transformation. 
+Even the XSLT rule could, conceivably, be dynamically generated based on conditions found in the resultant XML.
+* XML files make me nervous and I confess to the inclination to run each document through a validator. Human error prevails, in spite of our best effort oft-times.
+* I did discover a third party option for transformation of XML: [Saxonica](https://www.saxonica.com/html/download/download_page.html) 
+supports browser, and several programming language bindings. Are there yet more offerings, from other vendors? Absolutely.
+
+## Java
+
+Time permitting, I would like to take a crack at an equivalent solution written in Java.
+
+## C++
+
+Same for C++.
+
 -----------------------------------
 
 <sup>1</sup> [This Stack Overflow article](http://stackoverflow.com/questions/3466854/ddg#3466912) 
