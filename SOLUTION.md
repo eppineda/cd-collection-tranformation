@@ -1,6 +1,6 @@
 # Solution
 
-*Interviewee's note: This document is not thoroughly edited (spelling, grammar and lots and lots of 
+*Interviewee's note: This document is not thoroughly edited (spelling, grammar and lots and lots
 of informal tone and, hopefully, minimal technical inaccuracy). Were this for a much broader 
 audience, e.g. students viewing an online course, I would most certainly give this the white glove
 treatment.*
