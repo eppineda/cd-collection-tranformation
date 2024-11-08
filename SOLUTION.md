@@ -143,6 +143,43 @@ supports browser, and several programming language bindings. Are there yet more 
 
 Time permitting, I would like to take a crack at an equivalent solution written in Java.
 
+### Getting Started with Java
+You need your environment set up first. 
+1. Get a distribution. There are many choices. I like [SdkMan](https://sdkman.io/), to manage my runtime environment. Pick any distribution.
+2. Get the [XercesJ distribution](https://www.apache.org/dyn/closer.cgi/xerces/j/)<sup>5</sup>. The runtime is archived in a variety of formats. Pick the download that you can work with and, if necessary, verify the downloaded files' signature. When you are satisfied you have a safe copy of the files, you should end up with a folder called **xerces-2_12_2-xml-schema-1.1**, containing a *bewildering* assortment of files. What we really care about are the following:
+
+	a. xml-apis.jar
+	b. xercesIpml.jar
+	c. xalan.jar (missing; see Step 3)
+	d. serializer.jar
+
+	(Note: A plethora of choices exist for obtaining the necessary runtimes to transform XML with Java<sup>6</sup>. 
+I probably should have attempted an implementation with [Gradle](https://gradle.org/), one of three modern choices for managing a Java project. This choice also 
+determines where from project runtimes are downloaded, due to a lack of centralized repositories for the Java ecosystem. But I was just 
+following my nose on Google and I am short on time.)
+3. Get [Xalan](https://archive.apache.org/dist/xml/xalan-j/binaries/). We care only about:
+
+	a. xalan.jar
+	b. xerces.jar
+
+4. Set your classpath, so that Java knows from where to find its runtime executables, which you can choose to set as an environment variable, or, on the command line when you run Javaa. I hate excessive typing, so I'm going with the former. For *nix:
+
+```
+export CLASSPATH=$HOME/my/path/to/xml-apis.jar
+```
+
+which you repeat for each JAR cited above.
+
+### Testing the solution
+The preceding was *a lot* just so that we could execute the following on the command line:
+
+```
+java org.apache.xalan.xslt.Process -IN list.xml -XSL form.xsl -OUT output.html
+```
+
+If your runtime environment is set up correctly, **output.html** should show the transformed data as HTML markup. You will notice
+that it uses the same XML and XSL solution. The only thing we did differently here is change the runtime environment from the 
+web browser to the built-in XSLT command line program embedded in the xalan.jar. Whew!
 ## C++
 
 Same for C++.
@@ -152,8 +189,12 @@ Same for C++.
 <sup>1</sup> [This Stack Overflow article](http://stackoverflow.com/questions/3466854/ddg#3466912) 
 says the feature became available from all major web browsers in 2010.
 
-<sup>2</sup> I use NodeJS and many supporting tools e.g. *npx*
+<sup>2</sup> I use [NodeJS](https://nodejs.org/) and many supporting tools e.g. **npx** and **[pnpm](https://pnpm.io/)** for package management.
 
 <sup>3</sup> Boy, I hope I am using this terminology correctly. It's late; I'm in a rush.
 
 <sup>4</sup> Compliments on the selection of 90s music!
+
+<sup>5</sup> This open source library was retired a long time ago, and was intended to be a reference implementation. It is no longer actively maintained.
+
+<sup>6</sup> I am many, many years behind the times. The last time I was actively wrangling XML with Java, I was using the [XercesJ distribution](https://www.apache.org/dyn/closer.cgi/xerces/j/)<sup>5</sup>.
