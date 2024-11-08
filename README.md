@@ -1,4 +1,4 @@
-# cd-collection-tranformation
+# cd-collection-transformation
 sample conversions of XML database to HTML output
 
 ## Instructions
